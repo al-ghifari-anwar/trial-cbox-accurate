@@ -35,7 +35,7 @@ class Item extends CI_Controller
             CURLOPT_CUSTOMREQUEST => 'POST',
             CURLOPT_POSTFIELDS => '{
                 "itemType": "INVENTORY",
-                "name":"Banyu",
+                "name":"Wedang",
                 "no":"000078",
                 "serialNumberType":"BATCH",
                 "weight":"2000"
