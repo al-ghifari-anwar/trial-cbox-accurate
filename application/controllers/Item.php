@@ -39,7 +39,7 @@ class Item extends CI_Controller
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'POST',
             CURLOPT_POSTFIELDS => '{
-                "itemType": "INVENTORY",
+                "itemType": "SERVICE",
                 "name": "' . $name . '",
                 "no":"' . $no_batch . '",
                 "serialNumberType":"BATCH",
