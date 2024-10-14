@@ -10,6 +10,8 @@ class Token extends CI_Controller
 
     public function get()
     {
+        $this->output->set_content_type('application/json');
+
         $accurate = $this->MAccurate->get();
 
         $token = $accurate['api_token'];
@@ -40,6 +42,15 @@ class Token extends CI_Controller
 
         curl_close($curl);
 
-        echo $response;
+        // echo $response;
+
+        $result = [
+            'code' => 200,
+            'status' => 'failed',
+            'msg' => 'Tidak ada data',
+            'detail' => $response
+        ];
+
+        $this->output->set_output(json_encode($result));
     }
 }
