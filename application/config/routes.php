@@ -55,6 +55,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['api/token'] = 'Token/get';
-$route['api/session'] = 'Session/get';
+$route['api/session'] = 'Sessionid/get';
 // Item
 $route['api/item'] = 'Item/get';
