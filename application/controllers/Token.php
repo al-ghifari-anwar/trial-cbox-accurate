@@ -20,7 +20,7 @@ class Token extends CI_Controller
         $signature_secret = "31d49b3dc632614495ff8071e5be44a1";
         $timestamp = "02/11/2023 09:01:01";
 
-        $hash = hash_hmac('sha256', $timestamp, $signature_secret);
+        $hash = base64_encode(hash_hmac('sha256', $timestamp, $signature_secret));
 
         $curl = curl_init();
 
