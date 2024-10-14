@@ -34,9 +34,9 @@ class Sessionid extends CI_Controller
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'GET',
             CURLOPT_HTTPHEADER => array(
-                'Authorization: Bearer ' . $token,
-                'X-Api-Timestamp: ' . $timestamp,
-                'X-Api-Signature: ' . $hash,
+                // 'Authorization: Bearer ' . $token,
+                // 'X-Api-Timestamp: ' . $timestamp,
+                // 'X-Api-Signature: ' . $hash,
                 'id:' . 1423232
             ),
 
