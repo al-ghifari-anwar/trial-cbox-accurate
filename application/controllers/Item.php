@@ -33,11 +33,19 @@ class Item extends CI_Controller
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => '{
+                "itemType": "INVENTORY",
+                "name":"Air",
+                "no":"00005",
+                "serialNumberType":"BATCH",
+                "weight":"2000"
+            }',
             CURLOPT_HTTPHEADER => array(
                 'Authorization: Bearer ' . $token,
                 'X-Api-Timestamp: ' . $timestamp,
                 'X-Api-Signature: ' . $hash
             ),
+
         ));
 
         $response = curl_exec($curl);
