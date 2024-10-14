@@ -55,3 +55,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['api/token'] = 'Token/get';
+
+// Item
+$route['api/item'] = 'Item/get';
