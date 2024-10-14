@@ -48,7 +48,8 @@ class Token extends CI_Controller
             'code' => 200,
             'status' => 'failed',
             'msg' => 'Tidak ada data',
-            'detail' => json_decode($response, true)
+            'detail' => json_decode($response, true),
+            'auth' => $accurate
         ];
 
         $this->output->set_output(json_encode($result));
