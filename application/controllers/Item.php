@@ -12,7 +12,12 @@ class Item extends CI_Controller
     {
         $this->output->set_content_type('application/json');
 
+        $post = json_decode(file_get_contents('php://input'), true) != null ? json_decode(file_get_contents('php://input'), true) : $this->input->post();
+
         $accurate = $this->MAccurate->get();
+
+        $name = $post['name'];
+        $no_batch = $post['no_batch'];
 
         $token = $accurate['api_token'];
         $signature_secret = $accurate['signature_secret'];
@@ -35,8 +40,8 @@ class Item extends CI_Controller
             CURLOPT_CUSTOMREQUEST => 'POST',
             CURLOPT_POSTFIELDS => '{
                 "itemType": "INVENTORY",
-                "name":"Wedang",
-                "no":"000079",
+                "name": "' . $name . '",
+                "no":"' . $no_batch . '",
                 "serialNumberType":"BATCH",
                 "weight":"2000"
             }',
