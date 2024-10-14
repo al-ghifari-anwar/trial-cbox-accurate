@@ -15,10 +15,10 @@ class Token extends CI_Controller
         $accurate = $this->MAccurate->get();
 
         $token = $accurate['api_token'];
-        $signature_secret = $accurate['signature_secret'];
-        $timestamp = date("d/m/Y H:i:s");
-        // $signature_secret = "31d49b3dc632614495ff8071e5be44a1";
-        // $timestamp = "02/11/2023 09:01:01";
+        // $signature_secret = $accurate['signature_secret'];
+        // $timestamp = date("d/m/Y H:i:s");
+        $signature_secret = "31d49b3dc632614495ff8071e5be44a1";
+        $timestamp = "02/11/2023 09:01:01";
 
         $hash = base64_encode(hash_hmac('sha256', $timestamp, $signature_secret));
 
