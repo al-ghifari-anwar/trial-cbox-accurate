@@ -25,7 +25,7 @@ class Item extends CI_Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://zeus.accurate.id/api/item/save.do',
+            CURLOPT_URL => 'https://zeus.accurate.id/accurate/api/item/save.do',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
