@@ -25,7 +25,7 @@ class Token extends CI_Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => 'http://account.accurate.id/api/api-token.do',
+            CURLOPT_URL => 'https://account.accurate.id/api/api-token.do',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
