@@ -52,7 +52,8 @@ class Token extends CI_Controller
             'msg' => 'Data found',
             'detail' => json_decode($response, true),
             'auth' => $accurate,
-            'hash' => $hash
+            'hash' => $hash,
+            'timestamp' => $timestamp
         ];
 
         $this->output->set_output(json_encode($result));
