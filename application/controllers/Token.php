@@ -48,8 +48,8 @@ class Token extends CI_Controller
 
         $result = [
             'code' => 200,
-            'status' => 'failed',
-            'msg' => 'Tidak ada data',
+            'status' => 'ok',
+            'msg' => 'Data found',
             'detail' => json_decode($response, true),
             'auth' => $accurate,
             'hash' => $hash
