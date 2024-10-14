@@ -39,8 +39,8 @@ class Item extends CI_Controller
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'POST',
             CURLOPT_POSTFIELDS => '{
-                "itemType": "SERVICE",
-                "name": "' . $name . '",
+                "itemType":"INVENTORY",
+                "name":"' . $name . '",
                 "no":"' . $no_batch . '",
                 "serialNumberType":"BATCH",
                 "weight":"2000"
@@ -48,7 +48,8 @@ class Item extends CI_Controller
             CURLOPT_HTTPHEADER => array(
                 'Authorization: Bearer ' . $token,
                 'X-Api-Timestamp: ' . $timestamp,
-                'X-Api-Signature: ' . $hash
+                'X-Api-Signature: ' . $hash,
+                'Content-Type: application/json'
             ),
 
         ));
